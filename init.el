@@ -39,6 +39,9 @@
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
@@ -84,14 +87,13 @@
 
 (require 'init-projectile)
 
+(require 'init-yasnippet)
 (require 'init-compile)
 (require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
@@ -106,13 +108,12 @@
 (require 'init-rails)
 (require 'init-sql)
 (require 'init-rust)
+(require 'init-golang)
+(require 'init-lsp)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-(require 'init-nix)
-(maybe-require-package 'nginx-mode)
-
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
@@ -128,8 +129,6 @@
 (require 'init-folding)
 (require 'init-dash)
 
-;;(require 'init-twitter)
-;; (require 'init-mu)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
@@ -137,6 +136,8 @@
 (require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
+(require 'color)
+
 (when *is-a-mac*
   (require-package 'osx-location))
 (unless (eq system-type 'windows-nt)

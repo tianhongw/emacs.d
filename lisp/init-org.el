@@ -30,6 +30,9 @@
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
 
+(setq org-default-notes-file "~/Org/gtd/inbox.org")
+(setq org-agenda-files '("~/Org/gtd/life.org" "~/Org/gtd/inbox.org"))
+
 (defvar sanityinc/org-global-prefix-map (make-sparse-keymap)
   "A keymap for handy global access to org helpers, particularly clocking.")
 
@@ -227,7 +230,7 @@ typical word processor."
           (search category-up))
         org-agenda-window-setup 'current-window
         org-agenda-custom-commands
-        `(("N" "Notes" tags "NOTE"
+        `(("n" "Notes" tags "NOTE"
            ((org-agenda-overriding-header "Notes")
             (org-tags-match-list-sublevels t)))
           ("g" "GTD"
@@ -385,7 +388,6 @@ typical word processor."
 ;;                   (re-search-backward "^[0-9]+:[0-9]+-[0-9]+:[0-9]+ " nil t))
 ;;                 (insert (match-string 0))))))
 
-
 (after-load 'org
   (define-key org-mode-map (kbd "C-M-<up>") 'org-up-element)
   (when *is-a-mac*
@@ -413,6 +415,10 @@ typical word processor."
      (sql . t)
      (sqlite . t))))
 
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (provide 'init-org)
 ;;; init-org.el ends here

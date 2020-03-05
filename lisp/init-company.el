@@ -16,10 +16,15 @@
     (diminish 'company-mode)
     (define-key company-mode-map (kbd "M-/") 'company-complete)
     (define-key company-active-map (kbd "M-/") 'company-other-backend)
+    (define-key evil-insert-state-map (kbd "C-n") nil)
+    (define-key evil-insert-state-map (kbd "C-p") nil)
     (define-key company-active-map (kbd "C-n") 'company-select-next)
     (define-key company-active-map (kbd "C-p") 'company-select-previous)
     (setq-default company-dabbrev-other-buffers 'all
-                  company-tooltip-align-annotations t))
+                  company-tooltip-align-annotations t
+                  company-dabbrev-downcase nil
+                  company-minimum-prefix-length 2
+                  company-idle-delay 0))
   (global-set-key (kbd "M-C-/") 'company-complete)
   (when (maybe-require-package 'company-quickhelp)
     (add-hook 'after-init-hook 'company-quickhelp-mode)))
