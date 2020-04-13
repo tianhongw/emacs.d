@@ -210,7 +210,7 @@
        (nyan-create))))))
  '(package-selected-packages
    (quote
-    (treemacs popup ace-window lsp-treemacs rust-mode cargo lv lsp-mode lsp-ui company-lsp imenu-list symon page-break-lines all-the-icons neotree evil-escape expand-region nyan-mode go-eldoc exec-path-from-shell go-mode company-go cdlatex auctex markdown-mode flycheck quickrun hungry-delete evil-nerd-commenter solarized-theme counsel swiper which-key use-package evil-leader company org-bullets))))
+    (yasnippet treemacs popup ace-window lsp-treemacs rust-mode cargo lv lsp-mode lsp-ui company-lsp imenu-list symon page-break-lines all-the-icons neotree evil-escape expand-region nyan-mode go-eldoc exec-path-from-shell go-mode company-go cdlatex auctex markdown-mode flycheck quickrun hungry-delete evil-nerd-commenter solarized-theme counsel swiper which-key use-package evil-leader company org-bullets))))
 
 (provide 'init-local)
 ;;; init-local ends here
