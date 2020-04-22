@@ -14,7 +14,7 @@
               indent-tabs-mode nil)
 
 ;; --- UI ---
-(global-hl-line-mode 1)
+;; (global-hl-line-mode 1)
 
 (if (string-equal system-type "gnu/linux")
     (set-face-attribute 'default nil :font "Monaco 11"))
