@@ -7,7 +7,7 @@
   :commands (lsp lsp-deferred lsp-enable-which-key-integration)
   :init
   ;; @see https://github.com/emacs-lsp/lsp-mode#performance
-  (setq read-process-output-max (* 1024 1024)) ;; 1MB
+  (setq read-process-output-max (* 50 (* 1024 1024)))  ;; 50MB
   (setq lsp-keymap-prefix "C-c l")
   (setq lsp-prefer-flymake nil) ;; Prefer using lsp-ui (flycheck) over flymake.
   ;; (setq lsp-gopls-use-placeholders t)
