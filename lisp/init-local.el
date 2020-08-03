@@ -53,14 +53,6 @@
   :config
   (setq inhibit-compacting-font-caches t))
 
-;; https://github.com/zk-phi/symon
-(use-package symon
-  :ensure t
-  :init
-  (setq symon-delay 60)
-  :config
-  (symon-mode 1))
-
 (use-package hungry-delete
   :ensure t
   :config
