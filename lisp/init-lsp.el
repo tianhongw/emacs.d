@@ -55,19 +55,19 @@
   :config
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
-(use-package company-lsp
-  :ensure t
-  :requires company
-  :commands company-lsp
-  :config
-  (push 'company-lsp company-backends)
+;; (use-package company-lsp
+;;   :ensure t
+;;   :requires company
+;;   :commands company-lsp
+;;   :config
+;;   (push 'company-lsp company-backends)
 
-  ;; Disable client-side cache because the LSP server does a better job.
-  (setq company-transformers nil
-        company-lsp-enable-snippet t
-        company-lsp-async t
-        company-lsp-enable-recompletion t
-        company-lsp-cache-candidates nil))
+;;   ;; Disable client-side cache because the LSP server does a better job.
+;;   (setq company-transformers nil
+;;         company-lsp-enable-snippet t
+;;         company-lsp-async t
+;;         company-lsp-enable-recompletion t
+;;         company-lsp-cache-candidates nil))
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
