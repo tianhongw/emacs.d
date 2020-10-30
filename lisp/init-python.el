@@ -17,21 +17,5 @@
 
 (require-package 'pip-requirements)
 
-(when (maybe-require-package 'anaconda-mode)
-  (after-load 'python
-    ;; Anaconda doesn't work on remote servers without some work, so
-    ;; by default we enable it only when working locally.
-    (add-hook 'python-mode-hook
-              (lambda () (unless (file-remote-p default-directory)
-                      (anaconda-mode 1))))
-    (add-hook 'anaconda-mode-hook 'anaconda-eldoc-mode))
-  (after-load 'anaconda-mode
-    (define-key anaconda-mode-map (kbd "M-?") nil))
-  (when (maybe-require-package 'company-anaconda)
-    (after-load 'company
-      (after-load 'python
-        (push 'company-anaconda company-backends)))))
-
-
 (provide 'init-python)
 ;;; init-python.el ends here

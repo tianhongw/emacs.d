@@ -21,7 +21,8 @@
   (setq lsp-gopls-server-args '("serve" "-rpc.trace" "--debug=localhost:6060"))
   :hook
   (go-mode . lsp-deferred)
-  (rust-mode . lsp-deferred))
+  (rust-mode . lsp-deferred)
+  (python-mode . lsp-deferred))
 
 (use-package lsp-treemacs
   :ensure t
