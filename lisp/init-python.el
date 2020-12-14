@@ -17,5 +17,11 @@
 
 (require-package 'pip-requirements)
 
+(add-hook 'python-mode-hook
+          (lambda () (local-set-key (kbd "C-j") #'xref-find-definitions-other-window)))
+
+(add-hook 'python-mode-hook
+          (lambda () (local-set-key (kbd "C-c C-j") #'lsp-find-definition)))
+
 (provide 'init-python)
 ;;; init-python.el ends here
