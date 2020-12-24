@@ -13,6 +13,7 @@
   ;; (setq lsp-gopls-use-placeholders t)
   (setq lsp-enable-snippet t)
   (setq lsp-log-io nil)
+  (setq lsp-headerline-breadcrumb-enable nil)
   ;; (setq lsp-prefer-capf t)
   (setq lsp-enable-file-watchers nil)
   ;; (setq lsp-diagnostic-package :none) ;; no realtime syntax check

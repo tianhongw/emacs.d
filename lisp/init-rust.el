@@ -15,6 +15,7 @@
 (use-package rust-mode
   :ensure t
   :bind (:map rust-mode-map
+              ("C-c C-j" . lsp-find-definition)
               ("C-j" . xref-find-definitions-other-window))
   :config
   (setq rust-format-on-save t))
