@@ -114,7 +114,6 @@
   :ensure t
   :init
   (setq neo-smart-open t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   :config
   (evil-define-key 'normal neotree-mode-map (kbd "+") 'neotree-create-node)
   (evil-define-key 'normal neotree-mode-map (kbd "R") 'neotree-rename-node)
