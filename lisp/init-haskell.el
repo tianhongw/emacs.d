@@ -33,11 +33,11 @@
 
   (after-load 'haskell-mode
     (define-key haskell-mode-map (kbd "C-c h") 'hoogle)
-    (define-key haskell-mode-map (kbd "C-o") 'open-line))
+    (define-key haskell-mode-map (kbd "C-o") 'open-line)))
 
 
-  (after-load 'page-break-lines
-    (push 'haskell-mode page-break-lines-modes)))
+  ;; (after-load 'page-break-lines
+  ;;   (push 'haskell-mode page-break-lines-modes)))
 
 
 

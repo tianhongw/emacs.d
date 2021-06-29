@@ -18,6 +18,7 @@
   (setq lsp-enable-file-watchers nil)
   ;; (setq lsp-diagnostic-package :none) ;; no realtime syntax check
   (setq lsp-restart 'auto-restart)
+  (setq lsp-idle-delay 0.500)
   :config
   (setq lsp-gopls-server-args '("serve" "-rpc.trace" "--debug=localhost:6060"))
   :hook
